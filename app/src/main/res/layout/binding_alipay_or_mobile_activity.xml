@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_white" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45.0dip"
+                android:layout_marginTop="20.0dip"
+                android:background="@color/white">
+
+                <View
+                    android:id="@+id/top_line_rela1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/line_color" />
+
+                <TextView
+                    android:id="@+id/zhifubao_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/bottom_line_rela1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/top_line_rela1"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10.0dip"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="支 付 宝："
+                    android:textSize="14.0sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/bottom_line_rela1"
+                    android:layout_below="@+id/top_line_rela1"
+                    android:layout_toRightOf="@+id/zhifubao_text">
+
+                    <EditText
+                        android:id="@+id/zhifubao_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="请输入支付宝注册账号(邮箱号或手机号)"
+                        android:inputType="textEmailAddress"
+                        android:paddingRight="40.0dip"
+                        android:singleLine="true"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:id="@+id/can_use_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="20.0dip"
+                        android:drawableLeft="@drawable/bind_right"
+                        android:drawablePadding="5.0dip"
+                        android:text="可使用"
+                        android:textColor="@color/titlebackground"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/bound_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="20.0dip"
+                        android:drawableLeft="@drawable/bind_eorr"
+                        android:drawablePadding="5.0dip"
+                        android:text="已绑定"
+                        android:textColor="@color/price_color"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+
+                <View
+                    android:id="@+id/bottom_line_rela1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line_color" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/phone_number_rl"
+                android:layout_width="match_parent"
+                android:layout_height="45.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@color/white">
+
+                <View
+                    android:id="@+id/top_line_rela2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/line_color" />
+
+                <TextView
+                    android:id="@+id/phone_num_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/bottom_line_rela2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/top_line_rela2"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10.0dip"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="手 机 号："
+                    android:textSize="14.0sp" />
+
+
+                <EditText
+                    android:id="@+id/phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/bottom_line_rela2"
+                    android:layout_below="@+id/top_line_rela2"
+                    android:layout_toRightOf="@+id/phone_num_text"
+                    android:background="@null"
+                    android:hint="请输入手机号"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:textSize="14.0sp" />
+
+                <View
+                    android:id="@+id/bottom_line_rela2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line_color" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@color/white">
+
+                <View
+                    android:id="@+id/top_line_rela"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/line_color" />
+
+                <EditText
+                    android:id="@+id/security_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/bottom_line_rela"
+                    android:layout_below="@+id/top_line_rela"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_toLeftOf="@+id/line_view11"
+                    android:background="@null"
+                    android:hint="请输入6位验证码"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textSize="14.0sp" />
+
+                <View
+                    android:id="@+id/line_view11"
+                    android:layout_width="0.5dip"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_toLeftOf="@+id/get_bind_code_tv"
+                    android:background="@color/line_color" />
+
+                <Button
+                    android:id="@+id/get_bind_code_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/bottom_line_rela"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/top_line_rela"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="获取短信验证码"
+                    android:textColor="@color/titlebackground"
+                    android:textSize="14.0sp" />
+
+                <View
+                    android:id="@+id/bottom_line_rela"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line_color" />
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/show_bound_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginTop="15.0dip"
+                android:text=""
+                android:visibility="gone"
+                android:textColor="@color/product_selector_textcolor_p"
+                android:textSize="14.0sp" />
+            <Button
+                android:id="@+id/bind_button"
+                android:layout_width="match_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="15.0dip"
+                android:layout_marginTop="30.0dip"
+                android:background="@drawable/rounded_confirm_bg_gray"
+                android:gravity="center"
+                android:text="立即绑定"
+                android:textColor="@color/white"
+                android:textSize="14.0sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottom_line_rela"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/top_line_rela"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="15.0dip"
+                android:layout_marginTop="20.0dip"
+                android:background="@null"
+                android:gravity="center"
+                android:text="同一个登录账号只能绑定一个支付宝账号哦"
+                android:textColor="@color/product_selector_textcolor_p"
+                android:textSize="13.0sp" />
+
+
+        </LinearLayout>
+        <!--    <com.seastar.wasai.views.extendedcomponent.SimpleMessageView
+                android:id="@+id/container_error"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/window_background"
+                android:visibility="gone"
+                app:image="@drawable/ic_holder_network_error"
+                app:message="@string/holder_note_network_error" />
+
+            <com.seastar.wasai.views.extendedcomponent.LoadMessageView
+                android:id="@+id/container_load"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/window_background"
+                android:visibility="visible"
+                app:message="@string/loading" />-->
+
+    </FrameLayout>
+
+
+</LinearLayout>

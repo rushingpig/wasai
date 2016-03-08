@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_white" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="10.0dip">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="@string/useable_money"
+                    android:textSize="18.0sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_below="@+id/textView2"
+                    android:layout_marginBottom="10.0dip"
+                    android:layout_marginTop="8.0dip"
+                    android:background="@color/line_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/wbi_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="W币"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/wbi_textview"
+                        android:text=" (100 w币=1元) "
+                        android:textColor="#ffc1c1c1"
+                        android:textSize="13.0sp" />
+
+                    <TextView
+                        android:id="@+id/wcoin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/textView5"
+                        android:text=""
+                        android:textColor="@color/accent"
+                        android:textSize="24.0sp"
+                        android:layout_alignBaseline="@id/textView5"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="5.0dip"
+                        android:text="个"
+                        android:textColor="@color/text_gray"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_gray"
+                    android:text="折算等于"/>
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/fanli_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="返利金额"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/fanliAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/textView4"
+                        android:text=""
+                        android:textColor="@color/accent"
+                        android:textSize="24.0sp"
+                        android:layout_alignBaseline="@id/textView4"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="5.0dip"
+                        android:text="元"
+                        android:textColor="@color/text_gray"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15.0dip">
+
+                        <TextView
+                            android:id="@+id/to_fanli_Bill"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5.0dip"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/wallet_action_button"
+                            android:gravity="center"
+                            android:paddingBottom="10.0dip"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:paddingTop="10.0dip"
+                            android:text="收支账单"
+                            android:textColor="@color/titlebackground"
+                            android:textSize="12.0sp" />
+
+                        <TextView
+                            android:id="@+id/to_immediately"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginRight="5.0dip"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/rounded_confirm_bg"
+                            android:gravity="center"
+                            android:paddingBottom="10.0dip"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:paddingTop="10.0dip"
+                            android:text="立即使用"
+                            android:textColor="@color/white"
+                            android:textSize="12.0sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/changjian_wenti"
+                        android:layout_width="190.0dip"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mengban"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/jieshi_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="解释什么是W币，具体使用可以到个人中心。"
+                            android:textColor="@color/white"
+                            android:textSize="12.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/jieshi_textview"
+                            android:layout_marginLeft="60.0dip"
+                            android:text="常见问题>>"
+                            android:textColor="@color/goldenrod"
+                            android:textSize="12.0sp" />
+
+
+                    </RelativeLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:background="@color/white"
+                android:padding="10.0dip">
+
+                <TextView
+                    android:id="@+id/jijiangkeyong_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/will_rebate_label"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/toBeAvailAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/textView_1"
+                    android:text=""
+                    android:textColor="@color/product_selector_textcolor_p"
+                    android:textSize="18.0sp" />
+
+                <TextView
+                    android:id="@+id/textView_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="5.0dip"
+                    android:text="元"
+                    android:textColor="@color/text_gray"
+                    android:textSize="14.0sp" />
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_below="@+id/jijiangkeyong_textview"
+                    android:layout_marginBottom="15.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:background="@color/line_color" />
+
+                <TextView
+                    android:id="@+id/to_jijiangkeyong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/line"
+                    android:background="@drawable/bg_action_search_button"
+                    android:paddingBottom="8.0dip"
+                    android:paddingLeft="15.0dip"
+                    android:paddingRight="15.0dip"
+                    android:paddingTop="8.0dip"
+                    android:text="详情"
+                    android:textColor="@color/product_selector_textcolor_p"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.seastar.wasai.views.extendedcomponent.SimpleMessageView
+            android:id="@+id/container_error"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/window_background"
+            android:visibility="gone"
+            app:image="@drawable/ic_holder_network_error"
+            app:message="@string/holder_note_network_error" />
+
+        <com.seastar.wasai.views.extendedcomponent.LoadMessageView
+            android:id="@+id/container_load"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/window_background"
+            android:visibility="visible"
+            app:message="@string/loading" />
+
+    </FrameLayout>
+
+
+</LinearLayout>

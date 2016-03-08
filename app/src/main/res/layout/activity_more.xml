@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/window_background" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height" >
+
+        <LinearLayout
+            android:id="@+id/titleBar"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/abc_action_bar_default_height"
+            android:background="@color/titlebackground"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/category_page_title"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:gravity="center"
+                android:text="@string/more"
+                android:textColor="@color/ivory"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <include layout="@layout/menu_back" />
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/setting_scroll"
+        style="@style/PlainScroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/fragment_content_padding_top"
+        android:paddingBottom="25.0dip"
+        android:paddingTop="25.0dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <include layout="@layout/hr_action_item_group" />
+
+                <!--<com.seastar.wasai.views.extendedcomponent.SettingActionView
+                    android:id="@+id/setting_contribute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:settingIcon="@drawable/ic_setting_book"
+                    app:settingTitle="@string/more_action_contribute" />
+
+                <include layout="@layout/hr_action_item" />-->
+
+                <com.seastar.wasai.views.extendedcomponent.SettingActionView
+                    android:id="@+id/setting_question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:settingIcon="@drawable/ic_setting_question"
+                    app:settingTitle="@string/setting_question" />
+
+                <!--<include layout="@layout/hr_action_item" />-->
+
+                <com.seastar.wasai.views.extendedcomponent.SettingActionView
+                    android:id="@+id/setting_feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:settingIcon="@drawable/ic_setting_suggest"
+                    app:settingTitle="@string/more_action_feedback" />
+
+                <include layout="@layout/hr_action_item_group" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <include layout="@layout/hr_action_item_group" />
+
+                <com.seastar.wasai.views.extendedcomponent.SettingActionView
+                    android:id="@+id/setting_about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:settingIcon="@drawable/ic_setting_about"
+                    app:settingTitle="@string/more_action_about" />
+                <include layout="@layout/hr_action_item" />
+
+                <com.seastar.wasai.views.extendedcomponent.SettingActionView
+                    android:id="@+id/setting_clear_cache"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:settingIcon="@drawable/ic_setting_clear"
+                    app:settingTitle="@string/more_action_clear_cache" />
+
+                <include layout="@layout/hr_action_item" />
+
+                <com.seastar.wasai.views.extendedcomponent.SettingActionView
+                    android:id="@+id/setting_check_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:settingIcon="@drawable/ic_setting_update"
+                    app:settingTitle="@string/more_action_check_for_update" />
+
+                <include layout="@layout/hr_action_item_group" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:background="@color/block"
+                android:orientation="vertical" >
+
+                <include layout="@layout/hr_action_item_group" />
+
+                <com.seastar.wasai.views.extendedcomponent.SettingActionView
+                    android:id="@+id/setting_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:settingIcon="@drawable/ic_setting_concat"
+                    app:settingTitle="@string/setting_contact" />
+
+                <include layout="@layout/hr_action_item_group" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/shadow_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/fragment_content_padding_top"
+        android:alpha="0.4"
+        android:background="@color/black"
+        android:contentDescription="@string/app_name"
+        android:visibility="invisible" />
+
+</FrameLayout>

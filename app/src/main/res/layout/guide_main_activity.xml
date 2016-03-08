@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/window_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height"
+        android:background="@color/titlebackground">
+
+        <TextView
+            android:id="@+id/guide_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8.0dip"
+            android:layout_marginRight="15.0dp"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_toRightOf="@+id/to_time_line_activity"
+            android:background="@drawable/rounded_search_bg"
+            android:drawableLeft="@drawable/search_k46"
+            android:gravity="center_vertical"
+            android:hint="@string/search_hint_of_guide"
+            android:maxLength="20"
+            android:paddingLeft="5.0dip"
+            android:singleLine="true"
+            android:textSize="14.0sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_column"
+            android:layout_width="match_parent"
+            android:layout_height="45.0dip"
+            android:layout_weight="1.0">
+
+            <ImageView
+                android:id="@+id/shade_left"
+                android:layout_width="23.0dip"
+                android:layout_height="23.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/channel_leftblock"
+                android:visibility="gone" />
+
+            <com.seastar.wasai.utils.ui.ColumnHorizontalScrollView
+                android:id="@+id/guide_horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/shade_right"
+                android:layout_toRightOf="@+id/shade_left"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/guide_radioGroup_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" />
+            </com.seastar.wasai.utils.ui.ColumnHorizontalScrollView>
+
+
+            <ImageView
+                android:id="@+id/shade_right"
+                android:layout_width="23.0dip"
+                android:layout_height="23.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/channel_rightblock"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="45dp"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
+        <com.seastar.wasai.views.extendedcomponent.SimpleMessageView
+            android:id="@+id/container_error"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/window_background"
+            android:visibility="invisible"
+            app:image="@drawable/ic_holder_network_error"
+            app:message="@string/holder_note_network_error" />
+
+        <com.seastar.wasai.views.extendedcomponent.EmptyMessageView
+            android:id="@+id/container_empty"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="60dp"
+            android:background="@color/window_background"
+            android:visibility="invisible"
+            app:message="@string/guides_container_empty" />
+
+        <com.seastar.wasai.views.extendedcomponent.LoadMessageView
+            android:id="@+id/container_load"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/window_background"
+            app:message="@string/loading" />
+
+
+    </FrameLayout>
+
+</LinearLayout>

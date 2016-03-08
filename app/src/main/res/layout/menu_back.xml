@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ImageView
+        android:id="@+id/action_back"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:contentDescription="@string/app_name"
+        android:padding="15.0dip"
+        android:src="@drawable/ic_action_back" />
+
+</merge>

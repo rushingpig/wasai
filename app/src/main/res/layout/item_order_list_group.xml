@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8.0dip"
+    android:paddingTop="8.0dip">
+
+    <TextView
+        android:id="@+id/group_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="15.0dip"
+        android:text="京东"
+        android:textColor="@color/product_selector_textcolor_p"
+        android:textSize="15.0sp" />
+
+    <TextView
+        android:id="@+id/group_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="15.0dip"
+        android:text="记录时间：2015-07-07"
+        android:textColor="@color/product_selector_textcolor_p"
+        android:textSize="15.0sp" />
+</RelativeLayout>

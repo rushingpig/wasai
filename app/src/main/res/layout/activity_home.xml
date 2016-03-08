@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height"
+        android:background="@color/titlebackground">
+
+        <TextView
+            android:id="@+id/search_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8.0dip"
+            android:layout_marginRight="15.0dp"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rounded_search_bg"
+            android:drawableLeft="@drawable/search_k46"
+            android:gravity="center_vertical"
+            android:hint="@string/search_hint_str"
+            android:maxLength="20"
+            android:paddingLeft="5.0dip"
+            android:singleLine="true"
+            android:textSize="14.0sp" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/abc_action_bar_default_height">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/pull_refresh_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="#00000000"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="@color/transparent"
+            android:smoothScrollbar="true"
+            app:ptrDrawable="@drawable/refresh_icon"
+            app:ptrHeaderTextColor="@color/gray" />
+
+        <com.seastar.wasai.views.extendedcomponent.SimpleMessageView
+            android:id="@+id/container_error"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/window_background"
+            android:visibility="invisible"
+            app:image="@drawable/ic_holder_network_error"
+            app:message="@string/holder_note_network_error" />
+    </FrameLayout>
+</merge>

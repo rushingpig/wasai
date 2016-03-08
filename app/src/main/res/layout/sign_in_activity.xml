@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <GridView
+        android:layout_alignParentTop="true"
+        android:id="@+id/sign_in_gdDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="7" >
+    </GridView>
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_below="@+id/sign_in_gdDate"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10.0dip"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已连续签到1天，击败了34.66%的用户"/>
+    </LinearLayout>
+    <TextView
+        android:layout_below="@+id/linearLayout1"
+        android:id="@+id/sign_in_textview"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15.0dip"
+        android:text="签到"/>
+</RelativeLayout>

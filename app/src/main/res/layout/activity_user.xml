@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/window_background">
+
+    <ScrollView
+        android:id="@+id/setting_scroll"
+        style="@style/PlainScroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/window_background">
+
+            <RelativeLayout
+                android:id="@+id/user_avatar_frame"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/titlebackground">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="70.0dip"
+                    android:layout_height="70.0dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ig_profile_photo_default"
+                    app:riv_border_color="@color/white"
+                    app:riv_border_width="1.5dp"
+                    app:riv_oval="true" />
+
+                <TextView
+                    android:id="@+id/user_nick_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/avatar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/login_notification"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/userable_money"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user_nick_name"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/useable_money"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_marginBottom="10.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:background="@color/line_color" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/wbi_desc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="W币"
+                                    android:textColor="@color/white"
+                                    android:textSize="14.0sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBaseline="@id/wbi_desc"
+                                    android:text=" (100 w币=1元) "
+                                    android:textColor="@color/white"
+                                    android:textSize="12.0sp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:text="折算等于"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/fanli_desc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="返利金额"
+                                android:textColor="@color/white"
+                                android:textSize="14.0sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/wcoin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="26.0sp" />
+
+                                <TextView
+                                    android:id="@+id/wbi_unit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="个"
+                                    android:textColor="@color/white"
+                                    android:textSize="12.0sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/money"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="26.0sp" />
+
+                                <TextView
+                                    android:id="@+id/amount_unit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="元"
+                                    android:textColor="@color/white"
+                                    android:textSize="12.0sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_avatar_frame"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/order_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/block"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/hr_action_item_group" />
+
+                    <!--<com.seastar.wasai.views.extendedcomponent.SettingActionView-->
+                        <!--android:id="@+id/my_shopping_car"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--app:settingIcon="@drawable/shoppingcar"-->
+                        <!--app:settingTitle="@string/my_shopping_car" />-->
+
+                    <!--<include layout="@layout/hr_action_item" />-->
+
+                    <com.seastar.wasai.views.extendedcomponent.SettingActionView
+                        android:id="@+id/my_orders"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:settingIcon="@drawable/ic_setting_order"
+                        app:settingTitle="@string/my_orders" />
+
+                    <include layout="@layout/hr_action_item_group" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/hr_action_item_group" />
+
+                    <com.seastar.wasai.views.extendedcomponent.SettingActionView
+                        android:id="@+id/my_favorites"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:settingDesc="@string/my_favorites_desc"
+                        app:settingIcon="@drawable/ic_setting_favorite"
+                        app:settingTitle="@string/my_favorites" />
+
+                    <include layout="@layout/hr_action_item" />
+
+                    <com.seastar.wasai.views.extendedcomponent.SettingActionView
+                        android:id="@+id/my_points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:settingIcon="@drawable/ic_setting_wallet"
+                        app:settingTitle="@string/my_wallet" />
+
+                    <include layout="@layout/hr_action_item" />
+
+                    <com.seastar.wasai.views.extendedcomponent.SettingActionView
+                        android:id="@+id/setting_share_app"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:settingIcon="@drawable/ic_setting_share"
+                        app:settingTitle="@string/more_action_share_app" />
+
+                    <include layout="@layout/hr_action_item_group" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:background="@color/block"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/hr_action_item_group" />
+
+                    <com.seastar.wasai.views.extendedcomponent.SettingActionView
+                        android:id="@+id/setting_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:settingDesc="@string/setting_more_desc"
+                        app:settingIcon="@drawable/ic_setting_more"
+                        app:settingTitle="@string/setting_more" />
+
+                    <include layout="@layout/hr_action_item_group" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/shadow_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.4"
+        android:background="@color/black"
+        android:contentDescription="@string/app_name"
+        android:visibility="invisible" />
+</FrameLayout>

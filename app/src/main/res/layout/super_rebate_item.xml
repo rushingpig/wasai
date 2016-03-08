@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/window_background"
+    android:paddingLeft="0.5dip"
+    android:paddingRight="0.5dip"
+    android:paddingTop="0.5dip">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/super_reabate_time_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/super_rebate_back"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:id="@+id/counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/hour_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textColor="@color/super_rebate_back"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/hour_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textColor="@color/super_rebate_back"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text=":"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/minute_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textColor="@color/super_rebate_back"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/minute_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textColor="@color/super_rebate_back"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text=":"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/second_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textColor="@color/super_rebate_back"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/second_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textColor="@color/super_rebate_back"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/counter"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:text="@string/remain_time"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/super_reabate_time_layout">
+
+            <ImageView
+                android:id="@+id/item_image"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/item_middle_holder" />
+
+            <FrameLayout
+                android:id="@+id/sale_frame_layout"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:background="@drawable/product_off">
+
+                <com.seastar.wasai.utils.ui.RotateTextView
+                    android:id="@+id/sale_top_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="14.0sp"
+                    android:textStyle="bold"
+                    app:degree="-15dp" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/frameLayout"
+            android:background="#efefef"
+            android:orientation="vertical"
+            android:paddingBottom="5.0dip"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:paddingTop="10.0dip">
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/item_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:textColor="@color/product_selector_textcolor_p"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/before_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:textColor="@color/text_gray"
+                        android:textSize="14.0sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rate_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearLayout1"
+                    android:layout_marginBottom="8.0dip"
+                    android:layout_marginTop="8.0dip"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="折后"
+                            android:textColor="@color/product_selector_textcolor_p"
+                            android:textSize="12.0sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/fanli" />
+
+                        <TextView
+                            android:id="@+id/sale_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3.0dip"
+                            android:textColor="@color/product_selector_textcolor_p"
+                            android:textSize="12.0sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="25.0dip"
+                        android:background="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20.0dip"
+                            android:layout_height="20.0dip"
+                            android:background="@drawable/shoppingcar" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8.0dip"
+                            android:text="购买"
+                            android:textColor="@color/product_selector_textcolor_p"
+                            android:textSize="13.0sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/end_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:alpha="0.5"
+            android:src="@color/black" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="已抢光"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </FrameLayout>
+
+</FrameLayout>

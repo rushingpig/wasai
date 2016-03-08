@@ -1,0 +1,220 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_shape_circle_coner"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/real_name_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="姓名："
+                        android:textColor="@color/product_selector_textcolor_p"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/real_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_toRightOf="@id/real_name_label"
+                        android:background="@null"
+                        android:hint="请输入姓名"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <include layout="@layout/hr_action_item_group" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/mobile_no_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="电话："
+                        android:textColor="@color/product_selector_textcolor_p"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/mobile_no"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_toRightOf="@id/mobile_no_label"
+                        android:background="@null"
+                        android:hint="请输入手机号码"
+                        android:phoneNumber="true"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <include layout="@layout/hr_action_item_group" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/date_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="平台："
+                        android:textColor="@color/product_selector_textcolor_p"
+                        android:textSize="14sp" />
+
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/date_label" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip">
+
+                    <TextView
+                        android:id="@+id/desc_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="说明："
+                        android:textColor="@color/product_selector_textcolor_p"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/desc"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/desc_label"
+                        android:background="@drawable/edittext_background"
+                        android:gravity="left|top"
+                        android:hint="说明文字不超过150个字"
+                        android:inputType="textMultiLine"
+                        android:maxLength="150"
+                        android:minLines="4"
+                        android:padding="2.0dip"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5.0dip"
+                    android:layout_marginTop="10.0dip">
+
+                    <TextView
+                        android:id="@+id/textview11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="图片："
+                        android:textColor="@color/product_selector_textcolor_p"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textview222"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/textview11"
+                        android:gravity="left|center"
+                        android:inputType="textMultiLine"
+                        android:text="请上传 需要申诉的订单截图 帮助申诉。图片最多不超过3张"
+                        android:textColor="@color/product_selector_textcolor_p"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:gravity="left|center"
+                    android:inputType="textMultiLine"
+                    android:text="截图说明>>"
+                    android:textColor="@color/price_color"
+                    android:textSize="15sp" />
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10.0dip">
+
+                    <ImageView
+                        android:id="@+id/find_order_img_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_weight="1.0"
+                        android:src="@drawable/shangchuan" />
+
+                    <ImageView
+                        android:id="@+id/find_order_img_02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_weight="1.0"
+                        android:src="@drawable/shangchuan" />
+
+                    <ImageView
+                        android:id="@+id/find_order_img_03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_weight="1.0"
+                        android:src="@drawable/shangchuan" />
+                </LinearLayout>
+            </LinearLayout>
+            <Button
+                android:id="@+id/finishBtn"
+                style="@style/btnStyleSel"
+                android:text="@string/complete" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="@string/find_order_desc"
+                android:textColor="@color/input_hint"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

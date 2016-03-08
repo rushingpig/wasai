@@ -1,0 +1,192 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '22.0.1'
+
+    defaultConfig {
+        applicationId "com.seastar.wasai"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 20
+        versionName "2.2.0"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+
+    productFlavors {
+        fortest {
+            manifestPlaceholders = [CHANNEL_NAME: "fortest",APP_NAME: "哇塞Beta版"]
+            buildConfigField 'String','HOST','"http://202.104.122.67:8081/v2"'
+            buildConfigField 'String','HOST_SHARE','"http://202.104.122.67:8082"'
+            buildConfigField 'String','HOST_ORDER','"http://202.104.122.67:8008"'
+            buildConfigField 'String','HOST_ACTIVITY','"http://202.104.122.67:3008"'
+        }
+        wasai {
+            manifestPlaceholders = [CHANNEL_NAME: "wasai",APP_NAME: "哇塞宝贝"]
+            buildConfigField 'String','HOST','"http://api.91wasai.com/v2"'
+            buildConfigField 'String','HOST_SHARE','"http://web.91wasai.com"'
+            buildConfigField 'String','HOST_ORDER','"http://fl.91wasai.com"'
+            buildConfigField 'String','HOST_ACTIVITY','"http://hd.91wasai.com"'
+        }
+        scanning {
+            manifestPlaceholders = [CHANNEL_NAME: "scanning",APP_NAME: "哇塞宝贝"]
+            buildConfigField 'String','HOST','"http://api.91wasai.com/v2"'
+            buildConfigField 'String','HOST_SHARE','"http://web.91wasai.com"'
+            buildConfigField 'String','HOST_ORDER','"http://fl.91wasai.com"'
+            buildConfigField 'String','HOST_ACTIVITY','"http://hd.91wasai.com"'
+        }
+        yingyongbao {
+            manifestPlaceholders = [CHANNEL_NAME: "yingyongbao",APP_NAME: "哇塞宝贝"]
+            buildConfigField 'String','HOST','"http://api.91wasai.com/v2"'
+            buildConfigField 'String','HOST_SHARE','"http://web.91wasai.com"'
+            buildConfigField 'String','HOST_ORDER','"http://fl.91wasai.com"'
+            buildConfigField 'String','HOST_ACTIVITY','"http://hd.91wasai.com"'
+        }
+        baidu {
+            manifestPlaceholders = [CHANNEL_NAME: "baidu",APP_NAME: "哇塞宝贝"]
+            buildConfigField 'String','HOST','"http://api.91wasai.com/v2"'
+            buildConfigField 'String','HOST_SHARE','"http://web.91wasai.com"'
+            buildConfigField 'String','HOST_ORDER','"http://fl.91wasai.com"'
+            buildConfigField 'String','HOST_ACTIVITY','"http://hd.91wasai.com"'
+        }
+        huawei {
+            manifestPlaceholders = [CHANNEL_NAME: "huawei",APP_NAME: "哇塞宝贝"]
+            buildConfigField 'String','HOST','"http://api.91wasai.com/v2"'
+            buildConfigField 'String','HOST_SHARE','"http://web.91wasai.com"'
+            buildConfigField 'String','HOST_ORDER','"http://fl.91wasai.com"'
+            buildConfigField 'String','HOST_ACTIVITY','"http://hd.91wasai.com"'
+        }
+        xiaomi {
+            manifestPlaceholders = [CHANNEL_NAME: "xiaomi",APP_NAME: "哇塞宝贝"]
+            buildConfigField 'String','HOST','"http://api.91wasai.com/v2"'
+            buildConfigField 'String','HOST_SHARE','"http://web.91wasai.com"'
+            buildConfigField 'String','HOST_ORDER','"http://fl.91wasai.com"'
+            buildConfigField 'String','HOST_ACTIVITY','"http://hd.91wasai.com"'
+        }
+        wandoujia {
+            manifestPlaceholders = [CHANNEL_NAME: "wandoujia",APP_NAME: "哇塞宝贝"]
+            buildConfigField 'String','HOST','"http://api.91wasai.com/v2"'
+            buildConfigField 'String','HOST_SHARE','"http://web.91wasai.com"'
+            buildConfigField 'String','HOST_ORDER','"http://fl.91wasai.com"'
+            buildConfigField 'String','HOST_ACTIVITY','"http://hd.91wasai.com"'
+        }
+        c360 {
+            manifestPlaceholders = [CHANNEL_NAME: "360",APP_NAME: "哇塞宝贝"]
+            buildConfigField 'String','HOST','"http://api.91wasai.com/v2"'
+            buildConfigField 'String','HOST_SHARE','"http://web.91wasai.com"'
+            buildConfigField 'String','HOST_ORDER','"http://fl.91wasai.com"'
+            buildConfigField 'String','HOST_ACTIVITY','"http://hd.91wasai.com"'
+        }
+        meizu {
+            manifestPlaceholders = [CHANNEL_NAME: "meizu",APP_NAME: "哇塞宝贝"]
+            buildConfigField 'String','HOST','"http://api.91wasai.com/v2"'
+            buildConfigField 'String','HOST_SHARE','"http://web.91wasai.com"'
+            buildConfigField 'String','HOST_ORDER','"http://fl.91wasai.com"'
+            buildConfigField 'String','HOST_ACTIVITY','"http://hd.91wasai.com"'
+        }
+        anzhi {
+            manifestPlaceholders = [CHANNEL_NAME: "anzhi",APP_NAME: "哇塞宝贝"]
+            buildConfigField 'String','HOST','"http://api.91wasai.com/v2"'
+            buildConfigField 'String','HOST_SHARE','"http://web.91wasai.com"'
+            buildConfigField 'String','HOST_ORDER','"http://fl.91wasai.com"'
+            buildConfigField 'String','HOST_ACTIVITY','"http://hd.91wasai.com"'
+        }
+        oppo {
+            manifestPlaceholders = [CHANNEL_NAME: "oppo",APP_NAME: "哇塞宝贝"]
+            buildConfigField 'String','HOST','"http://api.91wasai.com/v2"'
+            buildConfigField 'String','HOST_SHARE','"http://web.91wasai.com"'
+            buildConfigField 'String','HOST_ORDER','"http://fl.91wasai.com"'
+            buildConfigField 'String','HOST_ACTIVITY','"http://hd.91wasai.com"'
+        }
+        wostore {
+            manifestPlaceholders = [CHANNEL_NAME: "wostore",APP_NAME: "哇塞宝贝"]
+            buildConfigField 'String','HOST','"http://api.91wasai.com/v2"'
+            buildConfigField 'String','HOST_SHARE','"http://web.91wasai.com"'
+            buildConfigField 'String','HOST_ORDER','"http://fl.91wasai.com"'
+            buildConfigField 'String','HOST_ACTIVITY','"http://hd.91wasai.com"'
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("wasai-release-key.keystore")
+            storePassword "\$eastar001"
+            keyAlias "wasai"
+            keyPassword "\$eastar001"
+        }
+        release {
+            storeFile file("wasai-release-key.keystore")
+            storePassword "\$eastar001"
+            keyAlias "wasai"
+            keyPassword "\$eastar001"
+        }
+    }
+
+
+    buildTypes {
+        debug {
+            buildConfigField 'String','HOST','"http://api.91wasai.com/v2"'
+            buildConfigField 'String','HOST_SHARE','"http://web.91wasai.com"'
+            buildConfigField 'String','HOST_ORDER','"http://fl.91wasai.com"'
+            buildConfigField 'String','HOST_ACTIVITY','"http://hd.91wasai.com"'
+//            buildConfigField 'String','HOST','"http://202.104.122.67:8081/v2"'
+//            buildConfigField 'String','HOST_SHARE','"http://202.104.122.67:8082"'
+//            buildConfigField 'String','HOST_ORDER','"http://202.104.122.67:8008"'
+//            buildConfigField 'String','HOST_ACTIVITY','"http://202.104.122.67:3008"'
+//            buildConfigField 'String','HOST','"http://api.91wasai.com/v2"'
+//            buildConfigField 'String','HOST_SHARE','"http://web.91wasai.com"'
+//            buildConfigField 'String','HOST_ORDER','"http://fl.91wasai.com"'
+//            buildConfigField 'String','HOST_ACTIVITY','"http://hd.91wasai.com"'
+            manifestPlaceholders = [CHANNEL_NAME: "debug",APP_NAME: "哇塞Dev版"]
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        def fileName = "wasai_v${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':PullToRefresh')
+    compile project(':OneSDK')
+    compile 'com.makeramen:roundedimageview:2.1.0'
+    compile 'com.mcxiaoke.volley:library:1.0.16'
+    compile ('com.etsy.android.grid:library:1.0.5')
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.android.support:recyclerview-v7:22.0.0'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'
+}

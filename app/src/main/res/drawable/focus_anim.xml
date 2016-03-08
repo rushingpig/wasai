@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<animation-list  
+  xmlns:android="http://schemas.android.com/apk/res/android"  
+  android:oneshot="false">  
+    <item android:drawable="@drawable/focus_1" android:duration="33"></item>
+    <item android:drawable="@drawable/focus_2" android:duration="33"></item>
+    <item android:drawable="@drawable/focus_3" android:duration="33"></item>
+    <item android:drawable="@drawable/focus_4" android:duration="33"></item>  
+    <item android:drawable="@drawable/focus_5" android:duration="33"></item>  
+    <item android:drawable="@drawable/focus_6" android:duration="33"></item>  
+    <item android:drawable="@drawable/focus_7" android:duration="33"></item>  
+    <item android:drawable="@drawable/focus_8" android:duration="33"></item>  
+    <item android:drawable="@drawable/focus_9" android:duration="33"></item>  
+    <item android:drawable="@drawable/focus_10" android:duration="33"></item>  
+    <item android:drawable="@drawable/focus_11" android:duration="33"></item>  
+    <item android:drawable="@drawable/focus_12" android:duration="33"></item>  
+    <item android:drawable="@drawable/focus_13" android:duration="33"></item>  
+    <item android:drawable="@drawable/focus_14" android:duration="33"></item>  
+    <item android:drawable="@drawable/focus_15" android:duration="33"></item>  
+    <item android:drawable="@drawable/focus_16" android:duration="33"></item>  
+    <item android:drawable="@drawable/focus_17" android:duration="33"></item>  
+    <item android:drawable="@drawable/focus_18" android:duration="33"></item>  
+    <item android:drawable="@drawable/focus_19" android:duration="33"></item>  
+    <item android:drawable="@drawable/focus_20" android:duration="33"></item>  
+</animation-list> 

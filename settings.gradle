@@ -1,0 +1,3 @@
+include ':app', ':PullToRefresh', ':OneSDK'
+project (':PullToRefresh').projectDir = new File('libs/pulltorefresh')
+project (':OneSDK').projectDir = new File('libs/OneSDK')

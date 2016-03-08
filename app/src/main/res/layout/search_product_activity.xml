@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.handmark.pulltorefresh.library.PullToRefreshGridView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/search_pull_refresh_grid"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="-6.0dip"
+            android:columnWidth="150dp"
+            android:gravity="fill"
+            android:horizontalSpacing="8dp"
+            android:numColumns="2"
+            android:paddingBottom="2dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="8dp"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="8dp"
+            app:ptrHeaderTextColor="@color/gray"
+            app:ptrDrawable="@drawable/refresh_icon"
+            ptr:ptrMode="both"
+            android:orientation="vertical" />
+
+        <com.seastar.wasai.views.extendedcomponent.SimpleMessageView
+            android:id="@+id/container_error"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/window_background"
+            android:visibility="invisible"
+            app:image="@drawable/ic_holder_network_error"
+            app:message="@string/holder_note_network_error" />
+
+        <TextView
+            android:id="@+id/empty_textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/window_background"
+            android:gravity="center"
+            android:text="@string/products_empty"
+            android:textColor="#ffa0a0a0"
+            android:textSize="16.0sp"
+            android:visibility="gone" />
+
+        <com.seastar.wasai.views.extendedcomponent.LoadMessageView
+            android:id="@+id/container_load"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/window_background"
+            app:message="@string/loading"
+            android:orientation="vertical" />
+    </FrameLayout>
+
+</LinearLayout>

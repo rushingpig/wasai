@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/search_view_header"
+        tools:ignore="ResourceCycle" />
+
+    <ScrollView
+        android:id="@+id/scrollview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/rate_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="拿返利小助手"
+                        android:textColor="@color/titlebackground"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/course_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="详细教程>"
+                        android:textColor="@color/super_rebate_back"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/shape_number"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="在淘宝复制标题"
+                        android:textColor="#999999"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/shape_number"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="到这里搜索，购买拿返利"
+                        android:textColor="#999999"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/hot_search_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="5.0dip"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginTop="20.0dip"
+                    android:text="热门搜索"
+                    android:textColor="#999999"
+                    android:textSize="15.0sp"
+                    android:visibility="gone" />
+
+                <com.seastar.wasai.views.extendedcomponent.MyFlowLayout
+                    android:id="@+id/hot_search_ll"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+
+                <!--<com.custom.vg.list.CustomListView
+                    android:id="@+id/hot_search_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginRight="15.0dip" />-->
+
+                <TextView
+                    android:id="@+id/history_search_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5.0dip"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginTop="20.0dip"
+                    android:text="历史搜索"
+                    android:textColor="#999999"
+                    android:textSize="15.0sp"
+                    android:visibility="gone" />
+
+                <!--    <com.seastar.wasai.views.extendedcomponent.MyFlowLayout
+                        android:id="@+id/history_search_ll"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginRight="20.0dip"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />-->
+
+                <com.custom.vg.list.CustomListView
+                    android:id="@+id/history_search_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginRight="15.0dip" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/clear_history_search"
+                android:layout_width="wrap_content"
+                android:layout_height="35.0dip"
+                android:layout_marginBottom="15.0dip"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/bg_action_search_button"
+                android:drawableLeft="@drawable/clear_history"
+                android:gravity="center"
+                android:paddingLeft="6.0dip"
+                android:paddingRight="10.0dip"
+                android:text="清除历史搜索"
+                android:textColor="@color/accent"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

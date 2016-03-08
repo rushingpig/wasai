@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/header" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/please_select_platform"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/input_hint"
+        android:textSize="16sp" />
+
+    <include layout="@layout/hr_action_item_group" />
+
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/white"
+        android:groupIndicator="@null"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <include layout="@layout/hr_action_item_group" />
+</LinearLayout>

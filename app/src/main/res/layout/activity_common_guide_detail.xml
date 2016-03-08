@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/window_background" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height" >
+
+        <LinearLayout
+            android:id="@+id/titleBar"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/abc_action_bar_default_height"
+            android:background="@color/titlebackground"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/category_page_title"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:gravity="center"
+                android:text="@string/article_detail"
+                android:textColor="@color/ivory"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <include layout="@layout/menu_back" />
+
+        <com.seastar.wasai.views.extendedcomponent.GuideActionCompactCounterView
+            android:id="@+id/article_action_compact_share"
+            android:layout_width="50dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="end"
+            android:padding="2.0dip" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/guide_page_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/fragment_content_padding_top"
+        android:background="@android:color/white" >
+        <WebView
+            android:id="@+id/guide_web"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="46.0dp"
+            android:scrollbars="none" />
+        <LinearLayout
+            android:id="@+id/article_action_panel_compact"
+            android:layout_width="fill_parent"
+            android:layout_height="46.0dip"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <com.seastar.wasai.views.extendedcomponent.GuideActionCompactCounterView
+                android:id="@+id/article_action_compact_fav"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <View
+                android:layout_width="0.5dip"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="#e8e8e8" />
+
+            <com.seastar.wasai.views.extendedcomponent.GuideActionCompactCounterView
+                android:id="@+id/article_action_compact_comment"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.seastar.wasai.views.extendedcomponent.SimpleMessageView
+        android:id="@+id/container_error"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/fragment_content_padding_top"
+        android:background="@color/window_background"
+        android:visibility="invisible"
+        app:image="@drawable/ic_holder_network_error"
+        app:message="@string/holder_note_network_error" />
+
+    <com.seastar.wasai.views.extendedcomponent.LoadMessageView
+        android:id="@+id/container_load"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/fragment_content_padding_top"
+        android:background="@color/window_background"
+        app:message="@string/loading" />
+
+    <ImageView
+        android:id="@+id/shadow_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/fragment_content_padding_top"
+        android:alpha="0.4"
+        android:background="@color/black"
+        android:contentDescription="@string/app_name"
+        android:visibility="invisible" />
+
+</FrameLayout>

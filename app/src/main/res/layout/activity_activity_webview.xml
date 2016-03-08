@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/window_background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height" >
+
+        <LinearLayout
+            android:id="@+id/titleBar"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/abc_action_bar_default_height"
+            android:background="@color/titlebackground"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/category_page_title"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:gravity="center"
+                android:text="@string/activityDetail"
+                android:textColor="@color/ivory"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <include layout="@layout/menu_back" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <WebView
+            android:id="@+id/activity_web"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none" />
+
+        <com.seastar.wasai.views.extendedcomponent.SimpleMessageView
+            android:id="@+id/container_error"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/fragment_content_padding_top"
+            android:background="@color/window_background"
+            android:visibility="invisible"
+            app:image="@drawable/ic_holder_network_error"
+            app:message="@string/holder_note_network_error" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/dialog_title_share"
+        android:textColor="@color/input_hint"
+        android:textSize="16sp" 
+        android:gravity="center"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:stretchColumns="0,1,2">
+        <TableRow>
+            <com.seastar.wasai.views.extendedcomponent.ShareButtonView
+                android:id="@+id/shareToWxT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:shareIcon="@drawable/ic_share_wechat_timeline_selector"
+                app:shareTitle="@string/share_platform_wechat_timeline" />
+
+            <com.seastar.wasai.views.extendedcomponent.ShareButtonView
+                android:id="@+id/shareToWxF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:shareIcon="@drawable/ic_share_wechat_selector"
+                app:shareTitle="@string/share_platform_wechat" />
+
+            <com.seastar.wasai.views.extendedcomponent.ShareButtonView
+                android:id="@+id/shareToSina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:shareIcon="@drawable/ic_share_sina_weibo_selector"
+                app:shareTitle="@string/share_platform_sina_weibo" />
+        </TableRow>
+
+        <TableRow>
+            <com.seastar.wasai.views.extendedcomponent.ShareButtonView
+                android:id="@+id/shareToQZone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:shareIcon="@drawable/ic_share_tencent_qzone_selector"
+                app:shareTitle="@string/share_platform_tencent_qzone" />
+
+            <com.seastar.wasai.views.extendedcomponent.ShareButtonView
+                android:id="@+id/shareToQQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:shareIcon="@drawable/ic_share_tencent_qq_selector"
+                app:shareTitle="@string/share_platform_tencent_qq" />
+
+            <com.seastar.wasai.views.extendedcomponent.ShareButtonView
+                android:id="@+id/openInBrowser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                app:shareIcon="@drawable/ic_share_hyperlink_selector"
+                app:shareTitle="@string/open_in_browser" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/shareCancelView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/dialog_cancel"
+        android:textColor="@color/text_major"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:textSize="24sp" />
+
+</LinearLayout>

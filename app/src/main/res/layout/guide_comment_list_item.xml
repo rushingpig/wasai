@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/container_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/avatar"
+            android:layout_width="34.0dip"
+            android:layout_height="34.0dip"
+            android:layout_margin="10.0dip"
+            android:background="@drawable/ig_profile_photo_default"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            app:riv_border_color="#ffe0e0e0"
+            app:riv_border_width="0.5dip"
+            app:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/avatar"
+            android:layout_marginLeft="-2.0dip"
+            android:layout_toRightOf="@id/avatar"
+            android:textColor="@color/comment_item_nickname_text"
+            android:textSize="14.0sp" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/nickname"
+            android:layout_below="@id/nickname"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="8.0dip"
+            android:textColor="@color/comment_item_text"
+            android:textColorLink="#ff26a1ff"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/created_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/nickname"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10.0dip"
+            android:textColor="@color/comment_item_birth_text"
+            android:textSize="10.0sp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1.0dip"
+            android:layout_alignLeft="@id/content"
+            android:layout_below="@id/content"
+            android:layout_marginTop="10.0dip"
+            android:background="@color/border" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.seastar.wasai.views.extendedcomponent.LoadMessageView
+        android:id="@+id/container_load"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/window_background"
+        app:message="@string/loading"
+        android:visibility="gone"/>
+
+    <com.seastar.wasai.views.extendedcomponent.LoadRebateView
+        android:id="@+id/container_load_rebate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:progressDrawable="@drawable/web_progress" />
+</RelativeLayout>

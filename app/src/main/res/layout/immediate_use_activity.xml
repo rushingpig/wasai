@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_white" />
+
+    <RelativeLayout
+        android:id="@+id/to_withdrawals_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/white_bg_for_list_selector"
+        android:paddingBottom="15.0dip"
+        android:paddingTop="15.0dip">
+
+        <ImageView
+            android:id="@+id/order_item_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15.0dip"
+            android:src="@drawable/jifenbao_icon" />
+
+        <LinearLayout
+            android:id="@+id/order_normal_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/order_item_image"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/order_item_rebate_money_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="兑换到支付宝集分宝"
+                android:textColor="@color/product_selector_textcolor_p"
+                android:textSize="15.0sp" />
+
+            <TextView
+                android:id="@+id/order_item_rebate_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="集分宝可以购物抵现"
+                android:textColor="@color/product_item_favorite_text"
+                android:textSize="13.0sp" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="15.0dip"
+            android:src="@drawable/ic_chevron_alternative" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/to_withdrawals_alipay_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/white_bg_for_list_selector"
+        android:paddingBottom="15.0dip"
+        android:paddingTop="15.0dip">
+
+        <ImageView
+            android:id="@+id/order_item_image1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15.0dip"
+            android:src="@drawable/alipay_icon2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/order_item_image1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="兑换到支付宝"
+                android:textColor="@color/product_selector_textcolor_p"
+                android:textSize="15.0sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付宝可以转银行卡提现"
+                android:textColor="@color/product_item_favorite_text"
+                android:textSize="13.0sp" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="15.0dip"
+            android:src="@drawable/ic_chevron_alternative" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25.0dip"
+        android:text="更多使用途径正在开通的路上啦"
+        android:textColor="@color/product_item_favorite_text"
+        android:textSize="13.0sp" />
+</LinearLayout>

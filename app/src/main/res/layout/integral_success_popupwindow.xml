@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/successPwdPopupwindow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:background="@drawable/rounded_textview"
+        android:gravity="center"
+        android:paddingBottom="15.0dip"
+        android:paddingTop="15.0dip"
+        android:text="兑换成功啦"
+        android:textColor="@color/white"
+        android:textSize="16.0sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:background="@drawable/rounded_textview_white"
+        android:orientation="vertical"
+        android:padding="10.0dip">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="10.0dip"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textview111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="本次兑换消耗  "
+                android:textColor="@color/product_selector_textcolor_p"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@+id/points_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/textview111"
+                android:text="300"
+                android:textColor="@color/red"
+                android:textSize="24.0sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/points_textview"
+                android:text="  积分"
+                android:textColor="@color/product_selector_textcolor_p"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15.0dip"
+            android:text="礼品已经在路上奔跑 -0-"
+            android:textColor="@color/text_gray"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20.0dip"
+            android:layout_marginTop="10.0dip"
+            android:gravity="center"
+            android:text="请继续保持天天签到好习惯，更多礼品等你来兑换~"
+            android:textColor="@color/text_gray"
+            android:textSize="15.0sp" />
+
+        <TextView
+            android:id="@+id/ok_button"
+            android:layout_width="wrap_content"
+            android:layout_height="35.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/rounded_buy_bg"
+            android:gravity="center"
+            android:paddingLeft="55.0dip"
+            android:paddingRight="55.0dip"
+            android:text="好的"
+            android:textColor="@color/white"
+            android:textSize="16.0sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

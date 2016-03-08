@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="top"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/feed_item_height">
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="5.0dip"
+        android:layout_marginLeft="7.0dip"
+        android:layout_marginRight="7.0dip"
+        android:layout_marginTop="5.0dip" >
+        <TextView 
+        android:id="@+id/focus_item_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+    
+	    <com.makeramen.roundedimageview.RoundedImageView
+	            android:id="@+id/focus_item_image"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:background="@drawable/bg_article_item"
+	            android:contentDescription="@string/app_name"
+	            android:scaleType="centerCrop"
+	            app:riv_corner_radius="5.0dip" />
+	        
+	    <TextView
+            android:id="@+id/focus_item_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_article_item_title"
+            android:paddingBottom="11.0dip"
+            android:paddingLeft="11.0dip"
+            android:paddingRight="11.0dip"
+            android:paddingTop="54.0dip"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</FrameLayout>

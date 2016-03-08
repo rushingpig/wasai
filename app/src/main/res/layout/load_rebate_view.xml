@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/product_item_favorite_text"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/load_rebate_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/bg_load_rebate_window"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="33dp"
+            android:text="@string/rebate_load"
+            android:textColor="@color/rebate_load_text"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/load_rebate_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="28dip"
+            android:scaleType="fitXY" />
+
+        <FrameLayout
+            android:id="@+id/price_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/load_rebate_logo"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="28dip"
+            android:layout_marginRight="28dip">
+
+            <LinearLayout
+                android:id="@+id/load_rebate_pay_and_rebate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/load_rebate_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_load_rebate_item"
+                    android:paddingBottom="11dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="11dp"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:id="@+id/load_rebate_pay_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rebate_load_pay"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/load_rebate_pay_tv_r"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="¥89.8"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/load_rebate_rebate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/bg_load_rebate_item"
+                    android:paddingBottom="11dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="11dp"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:id="@+id/load_rebate_rebate_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rebate_load_after_pay"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/load_rebate_rebate_tv_r"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="29.8"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/load_rebate_rebate_tv_m"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp"
+                        android:layout_toLeftOf="@id/load_rebate_rebate_tv_r"
+                        android:background="@drawable/bg_load_rebate_fan"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="返"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/load_rebate_rebate_tv_r1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/load_rebate_rebate_tv_m"
+                        android:text="预计"
+                        android:layout_marginRight="2.0dip"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.seastar.wasai.views.extendedcomponent.BallView
+                android:id="@+id/load_rebate_ball"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/login_msg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:gravity="center"
+            android:text="@string/rebate_msg"
+            android:textColor="@color/rebate_load_text"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

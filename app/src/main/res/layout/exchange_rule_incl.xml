@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/duihuan_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:drawableLeft="@drawable/zhangdanxiangqing"
+            android:drawablePadding="5.0dip"
+            android:text="兑换小常识"
+            android:textColor="@color/product_selector_textcolor_p"
+            android:textSize="13.0sp" />
+
+        <ImageView
+            android:id="@+id/duihuan_arrow"
+            android:layout_width="16.0dip"
+            android:layout_height="16.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/sx_down" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/duihuan_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:background="@color/line_color"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/duihuan_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="10.0dip"
+        android:text="由于淘宝限制,每次最多只能提取50000个集分宝"
+        android:textColor="@color/product_selector_textcolor_p"
+        android:textSize="14.0sp"
+        android:visibility="gone" />
+
+  <!--  <TextView
+        android:id="@+id/duihuan_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="10.0dip"
+        android:text="2.由于淘宝限制"
+        android:textColor="@color/product_selector_textcolor_p"
+        android:textSize="14.0sp"
+        android:visibility="gone" />-->
+</LinearLayout>

@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background" >
+
+    <LinearLayout
+        android:id="@+id/titleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/titlebackground"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:id="@+id/goodslayoutleft"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <include layout="@layout/menu_back" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/goodslayoutcenter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtforgetpwdtip1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="@string/txtforgetpwdtip1"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/goodslayoutright"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayoutmid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="@dimen/abc_action_bar_default_height"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtforgetpwdtip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="@dimen/abc_action_bar_default_height"
+            android:gravity="left"
+            android:text="@string/txtforgetpwdtip2"
+            android:textColor="@color/input_hint"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/edit_mob"
+            style="@style/edtstyle"
+            android:hint="@string/txtforgetpwdtip3"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/buttonForgetpwd"
+            style="@style/btnStyleNor"
+            android:text="@string/txtforgetpwdget" />
+    </LinearLayout>
+
+</RelativeLayout>

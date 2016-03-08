@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/window_background" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/abc_action_bar_default_height" >
+
+            <LinearLayout
+                android:id="@+id/titleBar"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/abc_action_bar_default_height"
+                android:background="@color/titlebackground"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/category_page_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center"
+                    android:text="@string/version_info"
+                    android:textColor="@color/ivory"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <include layout="@layout/menu_back" />
+        </FrameLayout>
+
+        <ScrollView
+            android:id="@+id/setting_scroll"
+            style="@style/PlainScroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/fragment_content_padding_top"
+            android:paddingBottom="25.0dip"
+            android:paddingTop="25.0dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                    <include layout="@layout/hr_action_item_group" />
+
+                    <ImageView
+                        android:id="@+id/app_icon"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/app_version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#ff444748"
+                        android:textSize="15.0sp" />
+
+                    <LinearLayout
+						android:focusable="true"  
+					   	android:focusableInTouchMode="true"
+					   	android:orientation="horizontal" 
+					   	android:layout_marginLeft="20dp"
+					    android:layout_marginRight="20dp"
+					    android:background="#cccccccc"
+					   	android:layout_width="fill_parent"
+					   	android:layout_height="1dp"
+					   	android:layout_marginTop="30dp" > 
+				    </LinearLayout>
+                    
+                    <TextView 
+				        android:id="@+id/newVerInfo"
+				        android:visibility="gone"
+				        android:textColor="@color/titlebackground"	 
+				        android:text="@string/soft_update_title"  
+				        android:textSize="18sp"       
+				        android:layout_marginTop="30dp"
+				        android:layout_marginLeft="20dp"
+				        android:layout_marginRight="20dp"
+				        android:layout_height="wrap_content"       
+				        android:layout_width="wrap_content"
+				        android:gravity="center"
+				        android:layout_gravity="center_horizontal" />   
+		
+				    
+		  
+                    <TextView
+                        android:id="@+id/updatecontent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:textColor="#ff444748"
+                        android:textSize="15.0sp" />
+
+                    <LinearLayout
+                        android:id="@+id/app_version_update_info"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="30dp" >
+                    </LinearLayout>
+
+                    <include layout="@layout/hr_action_item_group" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:paddingBottom="30dp" >
+
+            <Button
+                android:id="@+id/buttonupdatenow"
+                style="@style/btnStyleNor"
+                android:layout_marginBottom="30dp"
+                android:text="@string/buttonupdatenow2"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/about_company_name"
+                android:textColor="@color/text_major"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/copyright_domain"
+                android:textColor="@color/text_major"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/copyright"
+                android:textColor="@color/text_major"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

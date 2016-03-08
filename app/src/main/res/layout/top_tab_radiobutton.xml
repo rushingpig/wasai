@@ -1,0 +1,12 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="@drawable/product_top_tab_selector"
+    android:text="121221"
+    android:layout_height="45.0dip"
+    android:gravity="center"
+    android:paddingLeft="5.0dip"
+    android:textSize="15.0sp"
+    android:button="@null"
+    android:paddingRight="5.0dip"
+    android:textColor="@color/top_category_scroll_text_color_day" >
+</TextView>

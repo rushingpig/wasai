@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="45.0dip"
+    android:background="@color/titlebackground"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_toLeftOf="@+id/done_or_cancel_tv">
+
+        <EditText
+            android:id="@+id/search_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="8.0dip"
+            android:background="@drawable/rounded_search_bg"
+            android:drawableLeft="@drawable/search_k46"
+            android:hint="@string/search_hint_str"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="40.0dip"
+            android:singleLine="true"
+            android:textSize="14.0sp" />
+
+        <ImageView
+            android:id="@+id/delete_search"
+            android:layout_width="25.0dip"
+            android:layout_height="25dp"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="5.0dip"
+            android:src="@drawable/delele_for_search" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/done_or_cancel_tv"
+        android:layout_width="60.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/search_text"
+        android:textColor="@color/white"
+        android:textSize="15.0sp" />
+
+</RelativeLayout>

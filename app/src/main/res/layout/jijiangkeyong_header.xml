@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10.0dip">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5.0dip"
+        android:text="近期将存入"
+        android:textColor="@color/text_gray"
+        android:textSize="13.0sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@+id/textview_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="返利金额:"
+                android:textColor="@color/black_1e1d1c"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@+id/bill_price_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:text="0"
+                android:textColor="@color/accent"
+                android:textSize="28.0sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 元"
+                android:textColor="@color/product_selector_textcolor_p"
+                android:textSize="12.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip"
+        android:background="@drawable/wallet_arrow_line" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:text="即将返利交易记录"
+        android:textColor="@color/product_item_favorite_text"
+        android:textSize="12.0sp" />
+
+</LinearLayout>

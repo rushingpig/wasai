@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="110dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp">
+
+    <ImageView
+        android:id="@+id/guide_item_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/guide_middle_holder"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:layout_toRightOf="@id/guide_item_image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/guide_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="12dp"
+            android:textColor="@color/text_major"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="20dp"
+            android:layout_alignParentBottom="true">
+            <com.seastar.wasai.views.extendedcomponent.GuideActionCompactCounterView
+                android:id="@+id/article_action_compact_fav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.seastar.wasai.views.extendedcomponent.GuideActionCompactCounterView
+                android:id="@+id/article_action_compact_access"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

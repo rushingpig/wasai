@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/window_background_extended" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height" >
+
+        <LinearLayout
+            android:id="@+id/titleBar"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/abc_action_bar_default_height"
+            android:background="@color/titlebackground"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/category_page_title"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:gravity="center"
+                android:text="@string/txtuserinfo"
+                android:textColor="@color/ivory"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <include layout="@layout/menu_back" />
+
+        <TextView
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="right|center_vertical"
+            android:text="@string/save"
+            android:visibility="invisible"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_content_padding_top"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/avatarLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36.0dip" >
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@id/avatar"
+                android:layout_width="80.0dip"
+                android:layout_height="80.0dip"
+                android:background="@drawable/ig_profile_photo_default"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:riv_oval="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/avatar"
+                android:layout_alignRight="@id/avatar"
+                android:src="@drawable/ic_profile_select_photo" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/rule_stroke_width"
+            android:layout_marginTop="36.0dip"
+            android:background="@color/border" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20.0dip"
+            android:paddingRight="20.0dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_nickname"
+                android:textColor="@color/input_hint"
+                android:textSize="17.0sp" />
+
+            <EditText
+                android:id="@+id/nickname"
+                style="@style/Editor"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4.0dip"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:inputType="text"
+                android:paddingBottom="4.0dip"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip"
+                android:paddingTop="4.0dip"
+                android:textColor="@color/text_major"
+                android:maxLength="15"
+                android:textSize="17.0sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/rule_stroke_width"
+            android:background="@color/border" />
+    </LinearLayout>
+</FrameLayout>
